@@ -43,11 +43,11 @@ RUN <<EOT
 export GOXX_SKIP_APT_PORTS=1
 export DEBIAN_FRONTEND="noninteractive"
 apt-get update
-apt-get install --no-install-recommends -y git zip
+apt-get install --no-install-recommends -y git zip libasound2-dev
 for p in $PLATFORMS; do
-  TARGETPLATFORM=$p goxx-apt-get install -y binutils gcc g++ pkg-config
+  TARGETPLATFORM=$p goxx-apt-get install -y binutils gcc g++ pkg-config libasound2-dev
 done
-apt-get -y autoremove libasound2-dev
+apt-get -y autoremove
 apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ln -sf /usr/include/asm-generic /usr/include/asm
