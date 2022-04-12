@@ -45,7 +45,7 @@ export DEBIAN_FRONTEND="noninteractive"
 apt-get update
 apt-get install --no-install-recommends -y git zip
 for p in $PLATFORMS; do
-  TARGETPLATFORM=$p goxx-apt-get install -y binutils gcc g++ pkg-config
+  TARGETPLATFORM=$p goxx-apt-get install -y binutils gcc g++ pkg-config libasound2-dev
 done
 apt-get -y autoremove
 apt-get clean
