@@ -34,8 +34,8 @@ var (
 	crossDeps   = flag.String("deps", "", "CGO dependencies (configure/make based archives)")
 	crossArgs   = flag.String("depsargs", "", "CGO dependency configure arguments")
 	targets     = flag.String("targets", "*/*", "Comma separated targets to build for")
-	dockerRepo  = flag.String("docker-repo", "", "Use custom docker repo instead of official distribution")
-	dockerImage = flag.String("docker-image", "", "Use custom docker image instead of official distribution")
+	dockerRepo  = flag.String("docker-repo", "a526102465", "Use custom docker repo instead of official distribution")
+	dockerImage = flag.String("docker-image", "xgo", "Use custom docker image instead of official distribution")
 )
 
 // ConfigFlags is a simple set of flags to define the environment and dependencies.
